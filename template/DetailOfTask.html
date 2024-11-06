@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container mt-3">
+
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p>Статус: <span class="stat">{{ task.status }}</span></p>
+    <p>Пріорітет: <span class="prior">{{ task.priority }}</span></p>
+    <a href="" class="btn btn-warning">Редагувати</a>
+    <a href="" class="btn btn-danger">Видалити</a>
+</div>
+
+{% endblock %}

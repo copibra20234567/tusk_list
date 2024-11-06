@@ -1,7 +1,15 @@
 from django.urls import path
-from .views import TuskListView
+from app.views import TaskListView, TaskDetailView , TaskCreateView
 
 urlpatterns=[
-    path("",TuskListView.as_view(), name='tusklist')
+    path("tasklist/",TaskListView.as_view(), name='tasklist'),
+
+    path("<int:pk>/",TaskDetailView.as_view(), name='task-detail'),
+
+    path("task-create>/",TaskCreateView.as_view(), name='task-create')
+
 
 ]
+
+
+app_name = "app"
